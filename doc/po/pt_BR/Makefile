@@ -1,1 +1,2 @@
-include ../Makefile-lang.inc
+DOCSUFFIX=-br
+include ../Makefile.local
