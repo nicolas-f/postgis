@@ -1,7 +1,7 @@
 # This file should be included by the Makefile
 # in each language directory
 
-local-all: local-html
+local-all: local-html comments
 
 local-html: symlinks
 	$(MAKE) html
