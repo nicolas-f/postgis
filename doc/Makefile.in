@@ -21,6 +21,7 @@
 # that we could produce a large number of files (think chunked HTML)
 #
 
+translations = it_IT pt_BR 
 
 POSTGIS_MAJOR_VERSION=@POSTGIS_MAJOR_VERSION@
 POSTGIS_MINOR_VERSION=@POSTGIS_MINOR_VERSION@
@@ -67,6 +68,12 @@ DBLATEX=@DBLATEX@
 
 # Imagemagick's convert utility program for generated images used in the documentation
 IMAGEMAGICK=@IMAGEMAGICK@
+
+# Gettext for translated documentation
+MSGMERGE=msgmerge
+
+# XML gettext tools
+XML2POT=xml2pot
 
 # Directories for postgresql subdirectories
 PGSQL_DOCDIR=@PGSQL_DOCDIR@
@@ -125,6 +132,26 @@ XML_GENERATED_SOURCES = \
 	postgis-out.xml \
 
 XML_INPUTS = $(XML_SOURCES) $(XML_GENERATED_SOURCES)
+
+XML_INPUTS_POT = $(XML_SOURCES:%.xml=po/templates/%.xml.pot)
+
+$(XML_INPUTS_POT): po/templates/%.xml.pot: %.xml
+	$(XML2POT) $< > $@
+
+# Creates or updates translation files
+update-po: $(XML_INPUTS_POT)
+	@for lang in $(translations); do \
+    echo "Creating po files for language $$lang..." ; \
+    for pot in $(XML_INPUTS_POT); do \
+      mkdir -p po/$$lang; \
+      po=po/$$lang/`basename $$pot .pot`.po; \
+      if test -f $$po; then \
+        $(MSGMERGE) --update $$po $$pot; \
+      else \
+        cp $$pot $$po; \
+      fi; \
+    done; \
+  done
 
 ifeq ($(XSLTPROC),)
 postgis_aggs_mm.xml: requirements_not_met_xsltproc
