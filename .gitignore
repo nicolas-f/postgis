@@ -16,6 +16,7 @@ doc/html/image_src/Makefile
 doc/html/*.html
 doc/Makefile
 doc/Makefile.comments
+doc/po/*/*.xml
 doc/postgis_aggs_mm.xml
 doc/postgis_comments.sql
 doc/postgis-out.xml
