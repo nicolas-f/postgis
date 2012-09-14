@@ -19,13 +19,13 @@ msgstr ""
 #: reporting.xml:3
 #, no-c-format
 msgid "Reporting Problems"
-msgstr ""
+msgstr "Segnalare Problemi"
 
 #. Tag: title
 #: reporting.xml:6
 #, no-c-format
 msgid "Reporting Software Bugs"
-msgstr ""
+msgstr "Segnalare Malfunzionamenti del Programma"
 
 #. Tag: para
 #: reporting.xml:8
