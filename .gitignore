@@ -18,6 +18,8 @@ doc/Makefile
 doc/Makefile.comments
 doc/po/*/*.xml
 doc/po/*/*.po~
+doc/po/*/html
+doc/po/*/xsl
 doc/postgis_aggs_mm.xml
 doc/postgis_comments.sql
 doc/postgis-out.xml
