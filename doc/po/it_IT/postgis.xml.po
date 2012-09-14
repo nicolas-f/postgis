@@ -19,7 +19,7 @@ msgstr ""
 #: postgis.xml:106
 #, no-c-format
 msgid "PostGIS &last_release_version; Manual"
-msgstr "Manuale di PostGIS &last_release_version"
+msgstr "Manuale di PostGIS &last_release_version;"
 
 #. Tag: affiliation
 #: postgis.xml:114
@@ -49,7 +49,7 @@ msgstr ""
 #: postgis.xml:133
 #, no-c-format
 msgid "This is the manual for version &last_release_version;"
-msgstr "Questo e' il manuale per la versione &last_release_version"
+msgstr "Questo e' il manuale per la versione &last_release_version;"
 
 #. Tag: para
 #: postgis.xml:134
