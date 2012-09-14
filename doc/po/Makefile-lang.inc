@@ -1,12 +1,17 @@
 # This file should be included by the Makefile
 # in each language directory
 
-local-all: symlinks
+local-all: local-html
+
+local-html: symlinks
 	$(MAKE) html
 
+local-pdf: symlinks
+	$(MAKE) pdf
+
 symlinks:
-	ln -fs ../../html html
-	ln -fs ../../xsl xsl
+	rm -f html; ln -s ../../html html
+	rm -f xsl; ln -s ../../xsl xsl
 
 # for XML_SOURCES
 include ../../Makefile
