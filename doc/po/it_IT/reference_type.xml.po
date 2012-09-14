@@ -76,13 +76,15 @@ msgid ""
 "A box composed of x min, ymin, xmax, ymax. Often used to return the 2d "
 "enclosing box of a geometry."
 msgstr ""
+"Un rettangolo composto da xmin, ymin, xmax, ymax. "
+"Spesso usato per restituire il rettangolo che racchiude una geometria."
 
 #. Tag: title
 #: reference_type.xml:29 reference_type.xml:40 reference_type.xml:79
 #: reference_type.xml:136 reference_type.xml:155
 #, no-c-format
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #. Tag: para
 #: reference_type.xml:30
