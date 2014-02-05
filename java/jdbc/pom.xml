@@ -10,8 +10,8 @@
     <parent>
         <groupId>org.postgis</groupId>
         <artifactId>postgis-pom</artifactId>
-        <version>${POSTGIS_MAJOR_VERSION}.${POSTGIS_MINOR_VERSION}.${POSTGIS_MICRO_VERSION}</version>
         <relativePath>../</relativePath>
+        <version>2.1.0SVN</version>
     </parent>
 	<licenses>
 		<license>

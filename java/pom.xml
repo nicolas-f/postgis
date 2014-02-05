@@ -4,7 +4,7 @@
     <groupId>org.postgis</groupId>
     <artifactId>postgis-pom</artifactId>
     <packaging>pom</packaging>
-    <version>${POSTGIS_MAJOR_VERSION}.${POSTGIS_MINOR_VERSION}.${POSTGIS_MICRO_VERSION}</version>
+    <version>2.1.0SVN</version>
     <name>PostGIS pom</name>
 
     <licenses>
@@ -17,9 +17,4 @@
         <module>jdbc/jtssrc</module>
         <module>jdbc</module>
     </modules>
-    <properties>
-        <POSTGIS_MAJOR_VERSION>2</POSTGIS_MAJOR_VERSION>
-        <POSTGIS_MINOR_VERSION>1</POSTGIS_MINOR_VERSION>
-        <POSTGIS_MICRO_VERSION>0SVN</POSTGIS_MICRO_VERSION>
-    </properties>
 </project>
